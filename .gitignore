@@ -2,9 +2,11 @@
 /build/
 /lib/
 /dist/
+/docs/
 .idea/*
 
+.DS_Store
 coverage
 *.log
 
-package-lock.json
+/src/data/*
