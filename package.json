@@ -17,10 +17,6 @@
     "my-cli-tool": "./dist/esbuild/cli.js"
   },
   "scripts": {
-    "refresh": "yarn rollback && yarn migrate",
-    "rollback": "npx knex migrate:rollback --all --knexfile src/knexfile",
-    "migrate": "npx knex migrate:latest --knexfile src/knexfile",
-    "cli": "ts-node src/cli.ts",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
     "clean": "rm -rf dist build package",
@@ -33,24 +29,16 @@
     "esbuild-node:watch": "esbuild src/cli.ts --bundle --platform=node --watch --sourcemap=external --outfile=dist/esbuild/cli.js"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.26",
-    "@types/unzipper": "^0.10.9",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "esbuild": "^0.14.38",
     "eslint": "^8.14.0",
-    "jest": "27.0.0",
-    "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typedoc": "^0.22.15"
   },
   "dependencies": {
-    "fast-csv": "^5.0.1",
-    "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
     "typescript": "^4.6.3",
-    "udsv": "^0.5.3",
-    "unzipper": "^0.10.14"
+    "udsv": "^0.5.3"
   }
 }
