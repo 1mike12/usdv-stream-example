@@ -6,7 +6,7 @@ import {pipeline} from "stream";
 import {SimpleUDSVTransform} from "./src/streams/SimpleUDSVTransform";
 import {Writable} from "node:stream";
 
-const filePath = path.join(__dirname, "/downloads/sample.csv")
+const filePath = path.join(__dirname, "/src/downloads/sample.csv")
 
 const streamedCSV = async () => {
   const fileSize = await fs.promises.stat(filePath).then((stats) => stats.size)
