@@ -31,6 +31,7 @@ const transform = async () => {
       new ProgressBarStream(fileSize),
       new SimpleUDSVTransform(),
       new Writable({
+        objectMode:true,
         write(chunk, encoding, callback) {
           const x = chunk // never reaches here
           callback()
